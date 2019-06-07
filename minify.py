@@ -82,7 +82,7 @@ for directory in dirs_main_in:
                     # --------------------------------------------------------------------------------------------------
 
                     # find all """ within current line
-                    ind_block = [m.start() for m in re.finditer("\"\"\"", line)]
+                    ind_block = [m.start() for m in re.finditer("\'{3}|\"{3}", line)]
 
                     # if there is one """ then switch the in_block switch, if there are two delete line
                     if ind_block and len(ind_block) == 1:
